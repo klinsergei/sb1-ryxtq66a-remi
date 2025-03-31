@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="600" viewBox="0 0 1200 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- World map outline in light gray -->
+    <path d="M0,0 h1200 v600 h-1200 z" fill="#f3f4f6"/>
+    <path d="[Simplified world map path data]" fill="#e5e7eb"/>
+    
+    <!-- Highlighted regions -->
+    <!-- Latin America -->
+    <path d="[Latin America countries path]" fill="#3b82f6" opacity="0.6"/>
+    
+    <!-- Kazakhstan -->
+    <path d="[Kazakhstan path]" fill="#3b82f6" opacity="0.6"/>
+    
+    <!-- Turkey -->
+    <path d="[Turkey path]" fill="#3b82f6" opacity="0.6"/>
+  </g>
+</svg>

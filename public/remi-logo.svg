@@ -1,0 +1,6 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1024" height="1024" rx="200" fill="#0000CC"/>
+  <path d="M250 450 C 300 450, 350 600, 400 450 C 450 300, 500 600, 550 450 C 600 300, 650 600, 700 450 C 750 300, 800 450, 850 450" stroke="white" stroke-width="60" fill="none"/>
+  <path d="M250 450 C 300 450, 350 600, 400 450 C 450 300, 500 600, 550 450 C 600 300, 650 600, 700 450 C 750 300, 800 450, 850 450" stroke="#66CCFF" stroke-width="30" fill="none"/>
+  <text x="250" y="650" font-family="Arial" font-size="200" font-weight="bold" fill="white">remi</text>
+</svg>
