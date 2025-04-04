@@ -99,6 +99,15 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} REMI. All rights reserved.</p>
         </div>
       </div>
+    <div className="w-full bg-white py-4 flex flex-wrap items-center justify-center gap-6">
+  <img src="/visa.png" alt="Visa" className="h-8 object-contain" />
+  <img src="/mastercard.png" alt="Mastercard" className="h-8 object-contain" />
+  <img src="/troy.png" alt="Troy" className="h-8 object-contain" />
+  <img src="/jcb.png" alt="JCB" className="h-8 object-contain" />
+  <img src="/unionpay.png" alt="UnionPay" className="h-8 object-contain" />
+  <img src="/bank-transfer.png" alt="Bank Transfer" className="h-8 object-contain" />
+  <img src="/havale.png" alt="Havale" className="h-8 object-contain" />
+</div>
     </footer>
   );
 };
