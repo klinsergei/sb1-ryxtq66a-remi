@@ -12,19 +12,19 @@ const Home = ({ onContactClick }: HomeProps) => {
   const images = [
     {
       id: 0,
-      url: "https://images.unsplash.com/photo-1589519160732-57fc498494f8?auto=format&fit=crop&w=1920&q=80",
+      url: "/slides/slide1.png",
       title: "Global Reach",
       subtitle: "Up to 200 countries and territories"
     },
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=80",
+      url: "/slides/slide2.png",
       title: "Advanced Technology",
       subtitle: "Innovative Solutions for Your Business"
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1920&q=80",
+      url: "/slides/slide3.png",
       title: "Partnership",
       subtitle: "Trusted by Leading Companies"
     }
