@@ -54,7 +54,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 md:h-24">
             <Link to="/" className="flex items-center">
-              <img src="/remi-logo.svg" alt="REMI" className="h-10 w-auto align-middle" />
+              <img src="/remi-logo.svg" alt="REMI" className="h-12 w-auto align-middle" />
             </Link>
 
             <div className="hidden md:flex items-center space-x-8">
