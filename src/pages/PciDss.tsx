@@ -1,23 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Shield, CheckCircle } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 
 const PciDss = () => {
-  useEffect(() => {
-    const disableContextMenu = (e: MouseEvent) => e.preventDefault();
-    document.addEventListener('contextmenu', disableContextMenu);
-    return () => document.removeEventListener('contextmenu', disableContextMenu);
-  }, []);
-
   return (
-    <div className="flex flex-col select-none">
+    <div className="flex flex-col">
       {/* Hero Section */}
       <PageHeader
         title="PCI DSS Certification"
         subtitle="Ensuring the highest level of payment security"
       />
 
-      {/* Certificate Display Section */}
+      {/* Certificate Info Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -52,21 +46,6 @@ const PciDss = () => {
                   <CheckCircle className="w-6 h-6 text-success mr-3 mt-1 flex-shrink-0" />
                   <p className="text-gray-700">Continuous monitoring and incident response procedures</p>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Certificate Embed */}
-          <div className="bg-gray-50 p-8 rounded-lg border border-dashed border-gray-300 mb-12">
-            <div className="text-center">
-              <h3 className="text-xl font-semibold mb-4">PCI DSS Certificate</h3>
-              <div className="bg-white p-2 rounded border border-gray-200 flex items-center justify-center min-h-[500px]">
-                <iframe
-                  src="/docs/psi-dss.pdf#toolbar=0"
-                  title="PCI DSS Certificate"
-                  className="w-full h-[500px] pointer-events-none"
-                  sandbox=""
-                />
               </div>
             </div>
           </div>
