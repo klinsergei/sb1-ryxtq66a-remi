@@ -58,7 +58,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center">
-              <img src="/remi.png" alt="REMI" className="h-12 w-12" />
+              <img src="/remi-logo.svg" alt="REMI" className="h-12 w-12" />
             </div>
             <p className="mt-4 text-white/80">
               Global B2B Money Remittance Service Provider
