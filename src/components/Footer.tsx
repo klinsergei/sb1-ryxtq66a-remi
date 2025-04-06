@@ -19,43 +19,7 @@ const Footer = () => {
             </svg>
           </div>
           <div className="p-2 bg-white/10 rounded-md">
-            <svg className="h-10 w-16" viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="64" height="40" rx="4" fill="#fff"/>
-              <path d="M27 25.8h10V14.2H27v11.6z" fill="#fff"/>
-              <path d="M27.8 20a5.8 5.8 0 010-5.8h8.4a5.8 5.8 0 010 5.8h-8.4z" fill="#F1F1F1"/>
-              <path d="M43 14.2L38.3 20l4.6 5.8h-4.3L36 22.5l-2.6 3.3h-4.3l4.6-5.8-4.6-5.8h4.3l2.6 3.3 2.6-3.3H43z" fill="#00579F"/>
-            </svg>
-          </div>
-          <div className="p-2 bg-white/10 rounded-md">
-            <svg className="h-10 w-16" viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="64" height="40" rx="4" fill="#fff"/>
-              <path d="M35 14a5 5 0 00-5 5v6h12v-6a5 5 0 00-7-5z" fill="#000"/>
-              <path d="M30 25v-5a5 5 0 115 5h-5z" fill="#000"/>
-            </svg>
-          </div>
-          <div className="p-2 bg-white/10 rounded-md">
-            <svg className="h-10 w-16" viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="64" height="40" rx="4" fill="#fff"/>
-              <path d="M32 16l-3 5.2L32 26l3-4.8L32 16z" fill="#1507b2"/>
-              <path d="M32 16l-6 10h12l-6-10z" fill="#51D1FF" fillOpacity="0.4"/>
-              <path d="M39 25l-7-9-7 9h14z" fill="#cc2692"/>
-              <path d="M25 25l7-9 7 9" stroke="#4cef96" strokeWidth="1.5"/>
-              <path d="M32 26v-5" stroke="#27b588" strokeWidth="1.5"/>
-            </svg>
-          </div>
-          <div className="p-2 bg-white/10 rounded-md">
-            <div className="h-10 w-16 flex items-center justify-center text-white text-sm font-semibold">
-              BANK
-            </div>
-          </div>
-          <div className="p-2 bg-white/10 rounded-md">
-            <div className="h-10 w-16 flex items-center justify-center text-white text-sm font-semibold">
-              TROY
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center">
               <img src="/remi-logo.svg" alt="REMI" className="h-12 w-12" />
