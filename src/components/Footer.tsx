@@ -57,14 +57,20 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full bg-white py-4 flex flex-wrap items-center justify-center gap-6">
-        <img src="/visa.png" alt="Visa" className="h-8 w-auto object-contain px-2" />
-        <img src="/mastercard.png" alt="Mastercard" className="h-8 w-auto object-contain px-2" />
-        <img src="/troy.png" alt="Troy" className="h-8 w-auto object-contain px-2" />
-        <img src="/jcb.png" alt="JCB" className="h-8 w-auto object-contain px-2" />
-        <img src="/unionpay.png" alt="UnionPay" className="h-8 w-auto object-contain px-2" />
-        <img src="/bank-transfer.png" alt="Bank Transfer" className="h-8 w-auto object-contain px-2" />
-        <img src="/havale.png" alt="Havale" className="h-8 w-auto object-contain px-2" />
+      <div className="w-full bg-white py-4 flex flex-wrap items-center justify-center gap-4">
+        {[
+          { src: "/visa.png", alt: "Visa" },
+          { src: "/mastercard.png", alt: "Mastercard" },
+          { src: "/troy.png", alt: "Troy" },
+          { src: "/jcb.png", alt: "JCB" },
+          { src: "/unionpay.png", alt: "UnionPay" },
+          { src: "/bank-transfer.png", alt: "Bank Transfer" },
+          { src: "/havale.png", alt: "Havale" },
+        ].map(({ src, alt }) => (
+          <div key={alt} className="h-10 w-20 flex items-center justify-center">
+            <img src={src} alt={alt} className="max-h-full max-w-full object-contain" />
+          </div>
+        ))}
       </div>
     </footer>
   );
