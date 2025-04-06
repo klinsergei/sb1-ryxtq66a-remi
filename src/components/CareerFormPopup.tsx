@@ -124,33 +124,35 @@ const CareerFormPopup = ({ isOpen, onClose, defaultPosition }: CareerFormPopupPr
                 </select>
               </div>
 
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                  className="block w-full h-14 rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring-primary bg-white/30"
-                />
-              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    className="block w-full h-14 rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring-primary bg-white/30"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="cvLink" className="block text-sm font-medium text-gray-700 mb-2">
-                  Link to my CV *
-                </label>
-                <input
-                  type="url"
-                  id="cvLink"
-                  value={cvLink}
-                  onChange={(e) => setCvLink(e.target.value)}
-                  placeholder="https://"
-                  required
-                  className="block w-full h-14 rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring-primary bg-white/30"
-                />
+                <div>
+                  <label htmlFor="cvLink" className="block text-sm font-medium text-gray-700 mb-2">
+                    Link to my CV *
+                  </label>
+                  <input
+                    type="url"
+                    id="cvLink"
+                    value={cvLink}
+                    onChange={(e) => setCvLink(e.target.value)}
+                    placeholder="https://"
+                    required
+                    className="block w-full h-14 rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring-primary bg-white/30"
+                  />
+                </div>
               </div>
 
               <div>
