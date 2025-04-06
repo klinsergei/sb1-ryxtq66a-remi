@@ -63,12 +63,16 @@ const Footer = () => {
           { src: "/mastercard.png", alt: "Mastercard" },
           { src: "/troy.png", alt: "Troy" },
           { src: "/jcb.png", alt: "JCB" },
-          { src: "/unionpay.png", alt: "UnionPay" },
+          { src: "/unionpay.png", alt: "UnionPay", shrink: true },
           { src: "/bank-transfer.png", alt: "Bank Transfer" },
           { src: "/havale.png", alt: "Havale" },
-        ].map(({ src, alt }) => (
+        ].map(({ src, alt, shrink }) => (
           <div key={alt} className="h-10 w-20 flex items-center justify-center">
-            <img src={src} alt={alt} className="max-h-full max-w-full object-contain" />
+            <img
+              src={src}
+              alt={alt}
+              className={`object-contain ${shrink ? 'max-h-[70%] max-w-[70%]' : 'max-h-full max-w-full'}`}
+            />
           </div>
         ))}
       </div>
