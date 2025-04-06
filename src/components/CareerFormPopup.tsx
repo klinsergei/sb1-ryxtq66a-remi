@@ -18,7 +18,6 @@ const CareerFormPopup = ({ isOpen, onClose, defaultPosition }: CareerFormPopupPr
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
-      // Set default position if provided
       if (defaultPosition) {
         setPosition(defaultPosition);
       }
@@ -34,10 +33,8 @@ const CareerFormPopup = ({ isOpen, onClose, defaultPosition }: CareerFormPopupPr
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitResult(null);
-    
-    // Simulate email sending
+
     try {
-      // In a real implementation, you would use an email service or API endpoint
       console.log('Sending application to: info-remi@remirabbit.com');
       console.log({
         position,
@@ -45,23 +42,19 @@ const CareerFormPopup = ({ isOpen, onClose, defaultPosition }: CareerFormPopupPr
         cvLink,
         email
       });
-      
-      // Simulate API call
+
       await new Promise(resolve => setTimeout(resolve, 800));
-      
-      // If successful
+
       setSubmitResult({
         success: true,
         message: 'Your application has been submitted successfully! We will contact you soon.'
       });
-      
-      // Reset form
+
       setPosition(defaultPosition || '');
       setName('');
       setCvLink('');
       setEmail('');
-      
-      // Close popup after a delay
+
       setTimeout(() => {
         onClose();
         setSubmitResult(null);
@@ -88,11 +81,11 @@ const CareerFormPopup = ({ isOpen, onClose, defaultPosition }: CareerFormPopupPr
   return (
     <div className="fixed inset-0 z-50" onClick={onClose}>
       <div 
-        className="absolute inset-0 bg-black/20 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/20 backdrop-blur-sm" 
       />
       <div className="absolute inset-0 flex items-center justify-center p-4">
         <div 
-          className="bg-white/30 backdrop-blur-xl w-full max-w-xl rounded-2xl shadow-2xl"
+          className="bg-white/90 backdrop-blur-xl w-full max-w-xl rounded-2xl shadow-2xl"
           onClick={e => e.stopPropagation()}
         >
           <div className="flex justify-between items-center p-6 border-b border-gray-200/50">
