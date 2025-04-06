@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Shield, CheckCircle } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 
 const PciDss = () => {
+  useEffect(() => {
+    const disableContextMenu = (e: MouseEvent) => e.preventDefault();
+    document.addEventListener('contextmenu', disableContextMenu);
+    return () => document.removeEventListener('contextmenu', disableContextMenu);
+  }, []);
+
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col select-none">
       {/* Hero Section */}
       <PageHeader
         title="PCI DSS Certification"
@@ -21,7 +27,7 @@ const PciDss = () => {
               REMI maintains Payment Card Industry Data Security Standard (PCI DSS) certification, 
               the highest level of compliance for organizations that process payment card data.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-12">
               <div className="bg-gray-50 p-6 rounded-lg">
                 <div className="flex items-start">
@@ -50,12 +56,17 @@ const PciDss = () => {
             </div>
           </div>
 
+          {/* Certificate Embed */}
           <div className="bg-gray-50 p-8 rounded-lg border border-dashed border-gray-300 mb-12">
             <div className="text-center">
               <h3 className="text-xl font-semibold mb-4">PCI DSS Certificate</h3>
-              <div className="bg-white p-6 rounded border border-gray-200 flex items-center justify-center min-h-[400px]">
-                {/* Certificate will be displayed here */}
-                <p className="text-gray-500">Certificate will be displayed here once uploaded</p>
+              <div className="bg-white p-2 rounded border border-gray-200 flex items-center justify-center min-h-[500px]">
+                <iframe
+                  src="/docs/psi-dss.pdf#toolbar=0"
+                  title="PCI DSS Certificate"
+                  className="w-full h-[500px] pointer-events-none"
+                  sandbox=""
+                />
               </div>
             </div>
           </div>
