@@ -79,7 +79,7 @@ const CareerFormPopup = ({ isOpen, onClose, defaultPosition }: CareerFormPopupPr
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[999]" onClick={onClose}>
+    <div className="fixed inset-0 z-[9999]" onClick={onClose}>
       <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" />
       <div className="absolute inset-0 flex items-center justify-center p-4">
         <div
