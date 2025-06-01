@@ -27,19 +27,13 @@ const Footer = ({ onContactClick }: FooterProps) => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/remi-world" className="hover:underline">
-                  REMI World
-                </Link>
+                <Link to="/remi-world" className="hover:underline">REMI World</Link>
               </li>
               <li>
-                <Link to="/about" className="hover:underline">
-                  About Us
-                </Link>
+                <Link to="/about" className="hover:underline">About Us</Link>
               </li>
               <li>
-                <Link to="/careers" className="hover:underline">
-                  Careers
-                </Link>
+                <Link to="/careers" className="hover:underline">Careers</Link>
               </li>
             </ul>
           </div>
@@ -49,24 +43,16 @@ const Footer = ({ onContactClick }: FooterProps) => {
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/legal/privacy-policy" className="hover:underline">
-                  Privacy Policy
-                </Link>
+                <Link to="/legal/privacy-policy" className="hover:underline">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/legal/aml-policy" className="hover:underline">
-                  AML Policy
-                </Link>
+                <Link to="/legal/aml-policy" className="hover:underline">AML Policy</Link>
               </li>
               <li>
-                <Link to="/compliance" className="hover:underline">
-                  Compliance
-                </Link>
+                <Link to="/compliance" className="hover:underline">Compliance</Link>
               </li>
               <li>
-                <Link to="/pci-dss" className="hover:underline">
-                  PCI DSS
-                </Link>
+                <Link to="/pci-dss" className="hover:underline">PCI DSS</Link>
               </li>
             </ul>
           </div>
@@ -76,9 +62,7 @@ const Footer = ({ onContactClick }: FooterProps) => {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="flex items-center gap-2 mb-2">
               <Mail className="w-5 h-5" />
-              <a href="mailto:joinremi@remirabbit.com" className="text-sm">
-                joinremi@remirabbit.com
-              </a>
+              <a href="mailto:joinremi@remirabbit.com" className="text-sm">joinremi@remirabbit.com</a>
             </div>
             <button
               onClick={onContactClick}
