@@ -15,10 +15,10 @@ import ContactFormPopup from './components/ContactFormPopup';
 import CookiesPolicyPopup from './components/CookiesPolicyPopup';
 import AnimatedBackground from './components/AnimatedBackground';
 
-// ScrollToTop component to ensure pages start at the top when navigated to
+// Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-  
+
   useEffect(() => {
     try {
       window.scrollTo(0, 0);
@@ -26,22 +26,22 @@ const ScrollToTop = () => {
       console.error('Error scrolling to top:', error);
     }
   }, [pathname]);
-  
+
   return null;
 };
 
-// Add a global error boundary to catch and handle any errors
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+// Error boundary to catch rendering errors
+class ErrorBoundary extends React.Component<any, { hasError: boolean }> {
+  constructor(props: any) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(_: Error) {
     return { hasError: true };
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
 
@@ -52,7 +52,7 @@ class ErrorBoundary extends React.Component {
           <div className="p-8 bg-white rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-4">Something went wrong</h2>
             <p className="mb-4">There was an error loading this page. Please try refreshing.</p>
-            <button 
+            <button
               onClick={() => {
                 this.setState({ hasError: false });
                 window.location.reload();
@@ -73,26 +73,16 @@ class ErrorBoundary extends React.Component {
 function App() {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
-  // Add a defensive effect to handle potential DOM conflicts with extensions
   useEffect(() => {
-    // Create a handler for any uncaught errors
-    const handleError = (event) => {
-      // Only log errors not coming from extensions
+    const handleError = (event: ErrorEvent) => {
       if (!event.filename || !event.filename.includes('chrome-extension')) {
         console.error('Uncaught error:', event.message);
       }
-      
-      // Prevent the default to handle it ourselves
       event.preventDefault();
     };
 
-    // Add the global error handler
     window.addEventListener('error', handleError);
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('error', handleError);
-    };
+    return () => window.removeEventListener('error', handleError);
   }, []);
 
   return (
@@ -115,11 +105,8 @@ function App() {
               <Route path="/pci-dss" element={<PciDss />} />
             </Routes>
           </main>
-          <Footer />
-          <ContactFormPopup 
-            isOpen={isContactFormOpen} 
-            onClose={() => setIsContactFormOpen(false)} 
-          />
+          <Footer onContactClick={() => setIsContactFormOpen(true)} />
+          <ContactFormPopup isOpen={isContactFormOpen} onClose={() => setIsContactFormOpen(false)} />
           <CookiesPolicyPopup />
         </div>
       </Router>
