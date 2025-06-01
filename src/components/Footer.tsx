@@ -1,80 +1,97 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const Footer = () => {
+interface FooterProps {
+  onContactClick: () => void;
+}
+
+const Footer = ({ onContactClick }: FooterProps) => {
   return (
-    <footer className="text-white" style={{
-      backgroundImage: `radial-gradient(at 91.33% 24.40%, hsla(195.86, 100%, 65.88%, 1) 0%, hsla(195.86, 100%, 65.88%, 0) 100%), 
-                        radial-gradient(at 81.16% 1.88%, hsla(239.18, 90.98%, 52.15%, 1) 0%, hsla(239.18, 90.98%, 52.15%, 0) 100%),
-                        radial-gradient(at 41.25% 33.80%, hsla(195.86, 100%, 65.88%, 1) 0%, hsla(195.86, 100%, 65.88%, 0) 100%),
-                        radial-gradient(at 5.50% 91.87%, hsla(147.23, 83.58%, 61.76%, 1) 0%, hsla(147.23, 83.58%, 61.76%, 0) 100%),
-                        radial-gradient(at 35.63% 34.66%, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 0) 100%)`
-    }}>
+    <footer className="bg-gradient-to-r from-primary-light to-primary-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Branding + Legal */}
           <div>
-            <div className="flex items-center">
-              <img src="/remi-logo.svg" alt="REMI" className="h-12 w-12" />
-            </div>
-            <p className="mt-4 text-white/80">
+            <img src="/logo.svg" alt="Remi Logo" className="h-10 mb-4" />
+            <p className="text-sm leading-relaxed">
               Global B2B Money Remittance Service Provider
+            </p>
+            <p className="text-xs mt-2">
+              “Encore pay” LLP, NBRK registration number No. 01-23-160
             </p>
           </div>
 
+          {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><Link to="/remi-world" className="text-white/80 hover:text-white">REMI World</Link></li>
-              <li><Link to="/about" className="text-white/80 hover:text-white">About Us</Link></li>
-              <li><Link to="/careers" className="text-white/80 hover:text-white">Careers</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4"><Link to="/legal" className="text-white hover:text-white">Legal</Link></h3>
-            <ul className="space-y-2">
-              <li><Link to="/legal/privacy-policy" className="text-white/80 hover:text-white">Privacy Policy</Link></li>
-              <li><Link to="/legal/aml-policy" className="text-white/80 hover:text-white">AML Policy</Link></li>
-              <li><Link to="/compliance" className="text-white/80 hover:text-white">Compliance</Link></li>
-              <li><Link to="/pci-dss" className="text-white/80 hover:text-white">PCI DSS</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <ul className="space-y-4">
-              <li className="flex items-center text-white/80">
-                <Mail className="h-5 w-5 mr-2" />
-                joinremi@remirabbit.com
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/remi-world" className="hover:underline">
+                  REMI World
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:underline">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/careers" className="hover:underline">
+                  Careers
+                </Link>
               </li>
             </ul>
           </div>
-        </div>
 
-        <div className="mt-8 pt-8 border-t border-white/20 text-center text-white/80">
-          <p>&copy; {new Date().getFullYear()} REMI. All rights reserved.</p>
-        </div>
-      </div>
-
-      <div className="w-full bg-white py-4 flex flex-wrap items-center justify-center gap-4">
-        {[
-          { src: "/visa.png", alt: "Visa" },
-          { src: "/mastercard.png", alt: "Mastercard" },
-          { src: "/troy.png", alt: "Troy" },
-          { src: "/jcb.png", alt: "JCB" },
-          { src: "/unionpay.png", alt: "UnionPay", shrink: true },
-          { src: "/bank-transfer.png", alt: "Bank Transfer" },
-          { src: "/havale.png", alt: "Havale" },
-        ].map(({ src, alt, shrink }) => (
-          <div key={alt} className="h-10 w-20 flex items-center justify-center">
-            <img
-              src={src}
-              alt={alt}
-              className={`object-contain ${shrink ? 'max-h-[70%] max-w-[70%]' : 'max-h-full max-w-full'}`}
-            />
+          {/* Legal */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/legal/privacy-policy" className="hover:underline">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/legal/aml-policy" className="hover:underline">
+                  AML Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/compliance" className="hover:underline">
+                  Compliance
+                </Link>
+              </li>
+              <li>
+                <Link to="/pci-dss" className="hover:underline">
+                  PCI DSS
+                </Link>
+              </li>
+            </ul>
           </div>
-        ))}
+
+          {/* Contact */}
+          <div className="text-white">
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <div className="flex items-center gap-2 mb-2">
+              <Mail className="w-5 h-5" />
+              <a href="mailto:joinremi@remirabbit.com" className="text-sm">
+                joinremi@remirabbit.com
+              </a>
+            </div>
+            <button
+              onClick={onContactClick}
+              className="bg-white text-primary mt-4 px-5 py-2 rounded-full hover:bg-gray-100 transition text-sm"
+            >
+              Contact us →
+            </button>
+          </div>
+        </div>
+
+        <div className="mt-12 text-center text-xs text-white/70">
+          © 2025 REMI. All rights reserved.
+        </div>
       </div>
     </footer>
   );
