@@ -31,7 +31,6 @@ const About = () => {
                 alt="PayPorter Logo"
                 className="h-16 mx-auto mb-4 object-contain"
               />
-              <h3 className="text-xl font-semibold mb-2">PayPorter</h3>
               <p className="text-gray-600">Official Strategic Partner</p>
             </a>
           </div>
