@@ -48,7 +48,9 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
     <>
       <nav
         className={`sticky top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled ? 'glass-effect shadow-lg' : 'glass-effect'
+          isScrolled
+            ? 'bg-white/70 backdrop-blur-md shadow-md'
+            : 'bg-white/30 backdrop-blur-md'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,11 +95,11 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
           <div className="fixed inset-0 flex items-center justify-center p-4">
             <div
               ref={menuRef}
-              className="glass-effect w-full max-w-xl rounded-2xl shadow-2xl"
+              className="bg-white/30 backdrop-blur-md w-full max-w-xl rounded-2xl shadow-2xl"
               onClick={(e) => e.stopPropagation()}
               style={{ maxHeight: 'calc(100vh - 40px)', overflowY: 'auto' }}
             >
-              <div className="sticky top-0 flex justify-between items-center p-6 border-b border-gray-200/50 glass-effect z-10">
+              <div className="sticky top-0 flex justify-between items-center p-6 border-b border-gray-200/50 bg-white/40 backdrop-blur-md z-10">
                 <h2 className="text-xl font-semibold">Menu</h2>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -114,7 +116,7 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
                 >
                   Home
                 </button>
-                
+
                 <button
                   onClick={() => handleNavigate('/remi-world')}
                   className="block w-full h-14 rounded-lg border border-gray-300 shadow-sm focus:border-primary focus:ring-primary bg-white/30 text-left px-4 font-medium text-gray-800 hover:bg-white/50 transition-colors"
