@@ -13,7 +13,7 @@ const Footer = ({ onContactClick }: FooterProps) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Branding + Legal */}
           <div>
-            <img src="/logo.svg" alt="Remi Logo" className="h-10 mb-4" />
+            <img src="/remi-logo.svg" alt="Remi Logo" className="h-10 mb-4" />
             <p className="text-sm leading-relaxed">
               Global B2B Money Remittance Service Provider
             </p>
