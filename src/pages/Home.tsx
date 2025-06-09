@@ -10,7 +10,11 @@ import PlatformHighlights from '../components/PlatformHighlights';
 import Partners from '../components/Partners';
 import CallToAction from '../components/CallToAction';
 
-const Home = ({ onContactClick }) => {
+interface HomeProps {
+  onContactClick: () => void;
+}
+
+const Home: React.FC<HomeProps> = ({ onContactClick }) => {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
